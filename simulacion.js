@@ -1,5 +1,11 @@
 function cargarSimulacion() {
-  const dispositivos = JSON.parse(localStorage.getItem("misDispositivos") || "[]");
+  const usuario = localStorage.getItem("usuarioActivo");
+  if (!usuario) {
+    alert("Por favor selecciona un usuario antes de continuar.");
+    return;
+  }
+
+  const dispositivos = JSON.parse(localStorage.getItem(`misDispositivos_${usuario}`) || "[]");
   const lista = document.getElementById("seleccionables");
   lista.innerHTML = "";
 
@@ -37,19 +43,18 @@ function calcularTotal() {
   const nivel = document.getElementById("nivel");
   const panel = document.getElementById("panelConsumo");
 
-panel.classList.remove("panel-bajo", "panel-medio", "panel-alto");
+  panel.classList.remove("panel-bajo", "panel-medio", "panel-alto");
 
-if (total < 150) {
-  nivel.textContent = "Consumo Bajo";
-  panel.classList.add("panel-bajo");
-} else if (total < 400) {
-  nivel.textContent = "Consumo Medio";
-  panel.classList.add("panel-medio");
-} else {
-  nivel.textContent = "Consumo Alto";
-  panel.classList.add("panel-alto");
-}
-
+  if (total < 150) {
+    nivel.textContent = "Consumo Bajo";
+    panel.classList.add("panel-bajo");
+  } else if (total < 400) {
+    nivel.textContent = "Consumo Medio";
+    panel.classList.add("panel-medio");
+  } else {
+    nivel.textContent = "Consumo Alto";
+    panel.classList.add("panel-alto");
+  }
 
   const ctx = document.getElementById("grafica").getContext("2d");
   if (window.chart) window.chart.destroy();

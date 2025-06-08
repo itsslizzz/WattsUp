@@ -31,27 +31,39 @@ function filtrarProductos() {
 }
 
 function agregarDispositivo() {
+  const usuario = localStorage.getItem("usuarioActivo");
+  if (!usuario) {
+    alert("Por favor selecciona un usuario antes de agregar dispositivos.");
+    return;
+  }
+
   const select = document.getElementById("producto");
   const seleccionado = select.value;
   if (!seleccionado) return;
-  const dispositivos = JSON.parse(localStorage.getItem("misDispositivos") || "[]");
+
+  const dispositivos = JSON.parse(localStorage.getItem(`misDispositivos_${usuario}`) || "[]");
   const nuevo = JSON.parse(seleccionado);
   dispositivos.push(nuevo);
-  localStorage.setItem("misDispositivos", JSON.stringify(dispositivos));
+  localStorage.setItem(`misDispositivos_${usuario}`, JSON.stringify(dispositivos));
   renderLista();
 }
 
 function eliminarDispositivo(index) {
-  const dispositivos = JSON.parse(localStorage.getItem("misDispositivos") || "[]");
+  const usuario = localStorage.getItem("usuarioActivo");
+  if (!usuario) return;
+
+  const dispositivos = JSON.parse(localStorage.getItem(`misDispositivos_${usuario}`) || "[]");
   dispositivos.splice(index, 1);
-  localStorage.setItem("misDispositivos", JSON.stringify(dispositivos));
+  localStorage.setItem(`misDispositivos_${usuario}`, JSON.stringify(dispositivos));
   renderLista();
 }
 
 function renderLista() {
+  const usuario = localStorage.getItem("usuarioActivo");
   const lista = document.getElementById("lista");
-  if (!lista) return;
-  const dispositivos = JSON.parse(localStorage.getItem("misDispositivos") || "[]");
+  if (!lista || !usuario) return;
+
+  const dispositivos = JSON.parse(localStorage.getItem(`misDispositivos_${usuario}`) || "[]");
   lista.innerHTML = "";
   dispositivos.forEach((d, i) => {
     const li = document.createElement("li");
@@ -67,3 +79,4 @@ function renderLista() {
 }
 
 window.onload = cargarDatos;
+
