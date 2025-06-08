@@ -55,7 +55,7 @@ function renderLista() {
   lista.innerHTML = "";
   dispositivos.forEach((d, i) => {
     const li = document.createElement("li");
-    li.textContent = d.nombre + " (" + d.consumo_por_hora + " kWh) ";
+    li.textContent = d.nombre + " (" + d.consumo_por_hora + " KWh) ";
 
     const btn = document.createElement("button");
     btn.textContent = "Eliminar";

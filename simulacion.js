@@ -13,7 +13,7 @@ function cargarSimulacion() {
     chk.dataset.consumo = d.consumo_por_hora;
     chk.onchange = calcularTotal;
     li.appendChild(chk);
-    li.append(" " + d.nombre + " (" + d.consumo_por_hora + " kWh/h)");
+    li.append(" " + d.nombre + " (" + d.consumo_por_hora + " KWh)");
     lista.appendChild(li);
   });
 
@@ -26,13 +26,13 @@ function calcularTotal() {
   let labels = [], data = [];
 
   checks.forEach(c => {
-    const consumo = parseFloat(c.dataset.consumo) * 2 * 30 * 2;
+    const consumo = parseFloat(c.dataset.consumo) * 2 * 30; // 2 horas al día, 30 días
     total += consumo;
     labels.push(c.dataset.nombre);
     data.push(consumo.toFixed(1));
   });
 
-  document.getElementById("consumoTotal").textContent = total.toFixed(1) + " kWh";
+  document.getElementById("consumoTotal").textContent = total.toFixed(1) + " KWh";
 
   const nivel = document.getElementById("nivel");
   const panel = document.getElementById("panelConsumo");
@@ -58,7 +58,7 @@ if (total < 150) {
     data: {
       labels: labels,
       datasets: [{
-        label: 'Consumo por producto en kWh',
+        label: 'Consumo por producto en KWh',
         data: data
       }]
     }
