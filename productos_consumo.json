@@ -1,0 +1,102 @@
+[
+  {
+    "marca": "LG",
+    "nombre": "Refrigerador InstaView",
+    "consumo_por_hora": 0.12
+  },
+  {
+    "marca": "LG",
+    "nombre": "Lavadora Carga Frontal 22kg",
+    "consumo_por_hora": 0.18
+  },
+  {
+    "marca": "Samsung",
+    "nombre": "Refrigerador RT38K",
+    "consumo_por_hora": 0.15
+  },
+  {
+    "marca": "Samsung",
+    "nombre": "Lavadora WW22",
+    "consumo_por_hora": 0.16
+  },
+  {
+    "marca": "Whirlpool",
+    "nombre": "Estufa 6 quemadores",
+    "consumo_por_hora": 0.2
+  },
+  {
+    "marca": "Whirlpool",
+    "nombre": "Lavadora Whirlpool Xpert System",
+    "consumo_por_hora": 0.17
+  },
+  {
+    "marca": "Oster",
+    "nombre": "Microondas Oster 1000W",
+    "consumo_por_hora": 1.0
+  },
+  {
+    "marca": "Oster",
+    "nombre": "Licuadora Oster clásica",
+    "consumo_por_hora": 0.4
+  },
+  {
+    "marca": "Hisense",
+    "nombre": "Refrigerador Hisense 14 pies",
+    "consumo_por_hora": 0.14
+  },
+  {
+    "marca": "Hisense",
+    "nombre": "Aire acondicionado portátil 12000 BTU",
+    "consumo_por_hora": 1.2
+  },
+  {
+    "marca": "LG",
+    "nombre": "Aire acondicionado LG Dual Inverter 12000 BTU",
+    "consumo_por_hora": 1.2
+  },
+  {
+    "marca": "LG",
+    "nombre": "Secadora eléctrica LG EcoDry",
+    "consumo_por_hora": 2.4
+  },
+  {
+    "marca": "Samsung",
+    "nombre": "Aire acondicionado Wind-Free 18000 BTU",
+    "consumo_por_hora": 1.5
+  },
+  {
+    "marca": "Samsung",
+    "nombre": "Secadora de bomba de calor 9 kg",
+    "consumo_por_hora": 2.2
+  },
+  {
+    "marca": "Whirlpool",
+    "nombre": "Aire acondicionado Whirlpool Split 12000 BTU",
+    "consumo_por_hora": 1.3
+  },
+  {
+    "marca": "Whirlpool",
+    "nombre": "Secadora automática 19 kg",
+    "consumo_por_hora": 2.6
+  },
+  {
+    "marca": "Oster",
+    "nombre": "Freidora de aire Oster 5L",
+    "consumo_por_hora": 1.4
+  },
+  {
+    "marca": "Oster",
+    "nombre": "Tostador eléctrico Oster 2 ranuras",
+    "consumo_por_hora": 0.8
+  },
+  {
+    "marca": "Hisense",
+    "nombre": "Aire acondicionado Inverter 1 tonelada",
+    "consumo_por_hora": 1.1
+  },
+  {
+    "marca": "Hisense",
+    "nombre": "Deshumidificador Hisense 20L",
+    "consumo_por_hora": 0.9
+  }
+]

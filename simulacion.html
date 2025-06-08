@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Simulación de Consumo</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <div class="logo">
+        <a href="index.html">
+          <img src="bombilla.png" alt="Bombilla encendida como logotipo de WattsUp" width="150" height="55" />
+        </a>
+      </div>
+      <ul>
+        <li><a href="misDispositivos.html">Mis dispositivos</a></li>
+        <li><a href="calcular.html">Simulación</a></li> 
+      </ul>
+    </nav>
+  </header>
+  <h1>Simulación de Consumo (2 meses)</h1>
+
+  <div id="panelConsumo" class="panel-consumo">
+    <div id="consumoTotal" class="kwh"></div>
+    <div id="nivel" class="nivel"></div>
+    <canvas id="grafica"></canvas>
+  </div>
+
+
+  <h2>Selecciona dispositivos a calcular:</h2>
+  <ul id="seleccionables"></ul>
+
+  <script src="simulacion.js"></script>
+  <footer>
+    <p>&copy; 2025 WattsUp. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>

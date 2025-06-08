@@ -1,0 +1,171 @@
+body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: #fffef8;
+      color: #000;
+    }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1em 2em;
+      background-color: #ffffff;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.5em;
+      font-size: 1.2em;
+      font-weight: bold;
+    }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5em;
+      margin: 0;
+      padding: 0;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+    }
+
+    .inicio {
+      text-align: center;
+      padding: 4em 2em;
+    }
+
+    .inicio h1 {
+      font-size: 2em;
+      margin-bottom: 1.5em;
+    }
+
+    .btn-principal {
+      background-color: #ffcc00;
+      color: #000;
+      padding: 1em 2em;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1em;
+    }
+
+    .funcionalidades {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+      padding: 3em 2em;
+    }
+
+    .funcion {
+      flex: 1 1 300px;
+      max-width: 300px;
+      margin: 1em;
+      padding: 2em;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+      text-align: center;
+    }
+
+    .funcion h2 {
+      color: #000;
+      margin-bottom: 0.5em;
+    }
+
+    .funcion p {
+      color: #333;
+      font-size: 0.95em;
+    }
+
+    .funcion a {
+      display: inline-block;
+      margin-top: 1em;
+      background-color: #ffcc00;
+      color: #000;
+      padding: 0.6em 1.2em;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2em;
+      font-size: 0.85em;
+      color: #666;
+      background-color: #f4f4f4;
+      margin-top: 2em;
+    }
+
+label, select, button {
+  display: block;
+  margin-top: 15px;
+  margin-left : 30px;
+  font-size: 16px;
+}
+
+#resultado {
+  margin-top: 25px;
+  background: white;
+  padding: 15px;
+  border-radius: 8px;
+}
+.kwh {
+  font-size: 2em;
+  font-weight: bold;
+}
+.nivel {
+  font-size: 1.5em;
+  color: #555;
+  margin-bottom: 15px;
+}
+#grafica {
+  width: 350px !important;
+  height: 350px !important;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: 0;
+}
+.panel-consumo {
+  background-color: #fffacd; /* amarillo claro */
+  border-left: 6px solid #ffcc00;
+  padding: 20px;
+  margin: 30px;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+.panel-consumo .kwh {
+  font-size: 2.5em;
+  font-weight: bold;
+}
+
+.panel-consumo .nivel {
+  font-size: 1.5em;
+  color: #444;
+}
+/* Colores según el nivel de consumo */
+.panel-bajo {
+  background-color: #d4edda; /* verde claro */
+  border-left-color: #28a745;
+}
+
+.panel-medio {
+  background-color: #fff3cd; /* amarillo claro */
+  border-left-color: #ffc107;
+}
+
+.panel-alto {
+  background-color: #f8d7da; /* rojo claro */
+  border-left-color: #dc3545;
+}
